@@ -3944,6 +3944,10 @@ img.u-pull-left {
 .soft-skill-slider__slide:hover .soft-skill-slider__skill-description {
     color : var(--color-text);
 }
+.soft-skill-slider__slide:hover .soft-skill-slider__image{
+    filter: grayscale(0);
+    filter: blur(0px);
+}
 
 .soft-skill-slider__image{
     border-radius: 12px;
@@ -3954,6 +3958,9 @@ img.u-pull-left {
     min-height: 300px;
     max-width: 100%;
     min-width: 100%;
+
+    filter: grayscale(1) blur(1px);
+    transition: all 300ms;
 }
 
 .soft-skill-slider__skill{
