@@ -250,6 +250,10 @@ html {
 
 body {
     margin : 0;
+    
+}
+::-webkit-scrollbar{
+    display: none;
 }
 
 main {
@@ -3828,6 +3832,7 @@ img.u-pull-left {
  * ------------------------------------------------------------------- */
 .modal-popup {
     max-width        : 680px;
+    max-height: 98vh;
     background-color : white;
     font-size        : calc(var(--text-size) * 0.9447);
     line-height      : var(--vspace-0_875);
@@ -3909,6 +3914,9 @@ img.u-pull-left {
 }
 
 .modal-popup__techstack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
     list-style   : none;
     margin-left  : 0;
     font-size    : var(--text-sm);
@@ -3916,6 +3924,16 @@ img.u-pull-left {
     color        : rgba(0, 0, 0, 0.6);
     padding-left : calc(0.875 * var(--space));
     position     : relative;
+}
+.modal-popup__techstack li{
+    list-style: none;
+    padding: 4px 6px;
+    background-color: gray;
+    border-radius: 2px;
+    color: rgb(37, 37, 37);
+    margin: 3px 5px;
+    text-align: center;
+    font-family: var(--font-1);
 }
 
 .modal-popup__techstack::before {
@@ -3932,10 +3950,6 @@ img.u-pull-left {
     top                 : -0.15em;
 }
 
-.modal-popup__techstack li {
-    display      : inline;
-    padding-left : 0;
-}
 
 .modal-popup__teckstack li::after {
     content : ", ";
