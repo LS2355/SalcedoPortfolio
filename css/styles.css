@@ -1,16 +1,16 @@
 /* ------------------------------------------------------------------- 
  * ## fonts 
  * ------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=dm+serif+display&family=dm+serif+text:ital@0;1&family=public+sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
 
-    --font-1 : "Public Sans", sans-serif;
-    --font-2 : "DM Serif Display", serif;
+    --font-1 : "public sans", sans-serif;
+    --font-2 : "dm serif display", serif;
 
     /* monospace
     */
-    --font-mono : Consolas, "Andale Mono", Courier, "Courier New", monospace;
+    --font-mono : consolas, "andale mono", courier, "courier new", monospace;
 }
 
 /* ------------------------------------------------------------------- 
@@ -55,7 +55,7 @@
 
     /* shades 
      * generated using 
-     * Tint & Shade Generator 
+     * tint & shade generator 
      * (https://maketintsandshades.com/)
      */
     --color-black   : #000000;
@@ -162,7 +162,7 @@
      * --text-xl        = (32.83px)
      * --text-lg        = (27.36px)
      * --text-md        = (22.80px)
-     * --text-size      = (19.00px) BASE
+     * --text-size      = (19.00px) base
      * --text-sm        = (15.83px)
      * --text-xs        = (13.19px)
      *
@@ -235,11 +235,11 @@
 
 
 /* ====================================================================
- * # NORMALIZE
+ * # normalize
  *
  *
  * --------------------------------------------------------------------
- * normalize.css v8.0.1 | MIT License |
+ * normalize.css v8.0.1 | mit license |
  * github.com/necolas/normalize.css
  * -------------------------------------------------------------------- */
 
@@ -358,7 +358,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-    outline : 1px dotted ButtonText;
+    outline : 1px dotted buttontext;
 }
 
 fieldset {
@@ -426,7 +426,7 @@ template {
 
 
 /* ===================================================================
- * # BASE SETUP
+ * # base setup
  *
  *
  * ------------------------------------------------------------------- */
@@ -458,7 +458,7 @@ body {
 
 p {
     font-size      : inherit;
-    text-rendering : optimizeLegibility;
+    text-rendering : optimizelegibility;
 }
 
 a {
@@ -497,18 +497,18 @@ textarea {
 
 
 /* ===================================================================
- * # GRID v4.0.0
+ * # grid v4.0.0
  *
  *
  *   -----------------------------------------------------------------
- * - Grid breakpoints are based on MAXIMUM WIDTH media queries, 
- *   meaning they apply to that one breakpoint and ALL THOSE BELOW IT.
- * - Grid columns without a specified width will automatically layout 
+ * - grid breakpoints are based on maximum width media queries, 
+ *   meaning they apply to that one breakpoint and all those below it.
+ * - grid columns without a specified width will automatically layout 
  *   as equal width columns.
  *
- * - BLOCK GRID columns(columns inside BLOCK GRID containers) are 
+ * - block grid columns(columns inside block grid containers) are 
  *   equally-sized columns define at parent/row level. 
- *   A BLOCK GRID container's class attribute value begins with "block-".
+ *   a block grid container's class attribute value begins with "block-".
  *
  * ------------------------------------------------------------------- */
 
@@ -682,6 +682,12 @@ textarea {
     width : 100%;
 }
 
+#large-project{
+    width: 80%;
+    margin: 0 auto var(--vspace-1) auto;
+}
+
+
 /* --------------------------------------------------------------------
  * ## medium screen devices 
  * -------------------------------------------------------------------- */
@@ -786,6 +792,14 @@ textarea {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    #large-project{
+        flex         : none;
+        width        : 100%;
+        margin-left  : 0;
+        margin-right : 0;
+    }
+}
 /* --------------------------------------------------------------------
  * ## tablet devices 
  * -------------------------------------------------------------------- */
@@ -888,6 +902,8 @@ textarea {
     .hide-on-tab {
         display : none;
     }
+
+
 }
 
 /* --------------------------------------------------------------------
@@ -1070,7 +1086,7 @@ textarea {
 
 
 /* ===================================================================
- * # UTILITY CLASSES
+ * # utility classes
  *
  *
  * ------------------------------------------------------------------- */
@@ -1177,7 +1193,7 @@ textarea {
 
 
 /* ===================================================================
- * # TYPOGRAPHY 
+ * # typography 
  *
  *
  * ------------------------------------------------------------------- 
@@ -1192,7 +1208,7 @@ textarea {
  * --text-xl        = (32.83px)
  * --text-lg        = (27.36px)
  * --text-md        = (22.80px)
- * --text-size      = (19.00px) BASE
+ * --text-size      = (19.00px) base
  * --text-sm        = (15.83px)
  * --text-xs        = (13.19px)
  *
@@ -1235,7 +1251,7 @@ h1, h2, h3, h4, h5, h6,
     font-weight            : 400;
     color                  : var(--color-text-dark);
     font-variant-ligatures : common-ligatures;
-    text-rendering         : optimizeLegibility;
+    text-rendering         : optimizelegibility;
 }
 
 h1, .h1 {
@@ -1618,7 +1634,7 @@ dd {
 
 .lining dt+dt:before,
 .lining dd+dt:before {
-    content     : "\A";
+    content     : "\a";
     white-space : pre;
 }
 
@@ -1687,7 +1703,7 @@ img,
 
 
 /* ===================================================================
- * # PRELOADER
+ * # preloader
  * 
  * 
  * -------------------------------------------------------------------
@@ -1753,7 +1769,7 @@ img,
 
 
 /* ===================================================================
- * # FORM
+ * # form
  *
  *
  * ------------------------------------------------------------------- */
@@ -1883,39 +1899,39 @@ label>input[type="radio"] {
  * ## style placeholder text
  * ------------------------------------------------------------------- */
 ::-webkit-input-placeholder {
-    /* WebKit, Blink, Edge */
+    /* webkit, blink, edge */
     color : var(--color-placeholder);
 }
 
 :-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
+    /* mozilla firefox 4 to 18 */
     color   : var(--color-placeholder);
     opacity : 1;
 }
 
 ::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
+    /* mozilla firefox 19+ */
     color   : var(--color-placeholder);
     opacity : 1;
 }
 
 :-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
+    /* internet explorer 10-11 */
     color : var(--color-placeholder);
 }
 
 ::-ms-input-placeholder {
-    /* Microsoft Edge */
+    /* microsoft edge */
     color : var(--color-placeholder);
 }
 
 ::placeholder {
-    /* Most modern browsers support this now. */
+    /* most modern browsers support this now. */
     color : var(--color-placeholder);
 }
 
 /* ------------------------------------------------------------------- 
- * ## change autocomplete styles in Chrome
+ * ## change autocomplete styles in chrome
  * ------------------------------------------------------------------- */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -1933,7 +1949,7 @@ select:-webkit-autofill:focus {
 
 
 /* ===================================================================
- * # BUTTONS
+ * # buttons
  *
  *
  * ------------------------------------------------------------------- */
@@ -2058,7 +2074,7 @@ button.btn--pill {
 
 
 /* ===================================================================
- * # TABLE
+ * # table
  *
  *
  * ------------------------------------------------------------------- */
@@ -2103,7 +2119,7 @@ td:last-child {
 
 
 /* ===================================================================
- * # COMPONENTS
+ * # components
  *
  *
  * ------------------------------------------------------------------- */
@@ -2527,7 +2543,7 @@ td:last-child {
 
 
 /* ===================================================================
- * # PROJECT-WIDE SHARED STYLES
+ * # project-wide shared styles
  *
  *
  * ------------------------------------------------------------------- */
@@ -2602,7 +2618,7 @@ img.u-pull-left {
 .text-pretitle.with-line {
     color        : var(--color-1);
     padding-left : 6rem;
-    transform    : translateX(-6rem);
+    transform    : translatex(-6rem);
 }
 
 .text-pretitle.with-line::before {
@@ -2624,7 +2640,7 @@ img.u-pull-left {
 }
 
 /* ------------------------------------------------------------------- 
- * ## MailtoUI style overrides
+ * ## mailtoui style overrides
  * ------------------------------------------------------------------- */
 .mailtoui-modal {
     --mailtoui-modal-box-shadow         : 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08), 0 8px 8px rgba(0, 0, 0, 0.08);
@@ -2726,7 +2742,7 @@ img.u-pull-left {
 .mailtoui-button-copy-clicked,
 .mailtoui-button-copy-clicked:hover,
 .mailtoui-button-copy-clicked:focus {
-    background-color : #1F9D55;
+    background-color : #1f9d55;
     color            : white;
 }
 
@@ -2755,7 +2771,7 @@ img.u-pull-left {
 @media screen and (max-width: 800px) {
     .text-pretitle.with-line {
         padding-left : 3rem;
-        transform    : translateX(-3rem);
+        transform    : translatex(-3rem);
         transform    : none;
     }
 
@@ -2767,7 +2783,7 @@ img.u-pull-left {
 
 
 /* ===================================================================
- * # PAGE WRAP
+ * # page wrap
  *
  *
  * ------------------------------------------------------------------- */
@@ -2873,7 +2889,7 @@ img.u-pull-left {
 
 
 /* ===================================================================
- * # SITE HEADER
+ * # site header
  *
  *
  * ------------------------------------------------------------------- */
@@ -3055,7 +3071,7 @@ img.u-pull-left {
     }
 
     .main-nav-wrap {
-        transform        : scaleY(0);
+        transform        : scaley(0);
         transform-origin : center top;
         background-color : var(--color-body);
         border-bottom    : 1px solid var(--color-border);
@@ -3064,7 +3080,7 @@ img.u-pull-left {
 
     .main-nav {
         padding    : var(--vspace-1) 0 var(--vspace-1_5);
-        transform  : translateY(-2rem);
+        transform  : translatey(-2rem);
         opacity    : 0;
         visibility : hidden;
     }
@@ -3116,13 +3132,13 @@ img.u-pull-left {
     }
 
     .menu-is-open .main-nav-wrap {
-        transform        : scaleY(1);
+        transform        : scaley(1);
         transition       : transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
         transition-delay : 0s;
     }
 
     .menu-is-open .main-nav {
-        transform        : translateY(0);
+        transform        : translatey(0);
         opacity          : 1;
         visibility       : visible;
         transition       : all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -3139,7 +3155,7 @@ img.u-pull-left {
 
 
 /* ===================================================================
- * # INTRO
+ * # intro
  *
  *
  * ------------------------------------------------------------------- */
@@ -3176,7 +3192,7 @@ img.u-pull-left {
     letter-spacing   : .3em;
     margin           : 0;
     padding          : 0 0 0 9.6rem;
-    transform        : rotate(-90deg) translateX(-50%);
+    transform        : rotate(-90deg) translatex(-50%);
     transform-origin : left bottom;
     position         : absolute;
     top              : 50%;
@@ -3344,7 +3360,7 @@ img.u-pull-left {
 
 
 /* ===================================================================
- * # ABOUT
+ * # about
  *
  *
  * ------------------------------------------------------------------- */
@@ -3625,7 +3641,7 @@ img.u-pull-left {
 
 
 /* ===================================================================
- * # WORKS
+ * # works
  *
  *
  * ------------------------------------------------------------------- */
@@ -3889,8 +3905,47 @@ img.u-pull-left {
 .modal-popup__details:focus,
 .modal-popup__details:hover {
     background-color : var(--color-body);
-    color            : white;
+    color            : var(--color-1-light);
 }
+
+.modal-popup__techstack {
+    list-style   : none;
+    margin-left  : 0;
+    font-size    : var(--text-sm);
+    line-height  : var(--vspace-0_5);
+    color        : rgba(0, 0, 0, 0.6);
+    padding-left : calc(0.875 * var(--space));
+    position     : relative;
+}
+
+.modal-popup__techstack::before {
+    content             : "";
+    display             : block;
+    height              : calc(0.625 * var(--space));
+    width               : calc(0.625 * var(--space));
+    background-repeat   : no-repeat;
+    background-position : center;
+    background-size     : contain;
+    background-image    : url(../images/icons/techStackIcon.png);
+    position            : absolute;
+    left                : 0;
+    top                 : -0.15em;
+}
+
+.modal-popup__techstack li {
+    display      : inline;
+    padding-left : 0;
+}
+
+.modal-popup__teckstack li::after {
+    content : ", ";
+}
+
+.modal-popup__teckstack li:last-child::after {
+    display : none;
+}
+
+
 
 /* ------------------------------------------------------------------- 
  * ## soft-skills
@@ -3944,11 +3999,6 @@ img.u-pull-left {
 .soft-skill-slider__slide:hover .soft-skill-slider__skill-description {
     color : var(--color-text);
 }
-.soft-skill-slider__slide:hover .soft-skill-slider__image{
-    filter: grayscale(0);
-    filter: blur(0px);
-}
-
 .soft-skill-slider__image{
     border-radius: 12px;
     overflow: hidden;
@@ -3959,8 +4009,6 @@ img.u-pull-left {
     max-width: 100%;
     min-width: 100%;
 
-    filter: grayscale(1) blur(1px);
-    transition: all 300ms;
 }
 
 .soft-skill-slider__skill{
@@ -4072,7 +4120,7 @@ img.u-pull-left {
 
 
 /* ===================================================================
- * # CONTACT
+ * # contact
  *
  *
  * ------------------------------------------------------------------- */
@@ -4160,7 +4208,7 @@ img.u-pull-left {
 
 
 /* ===================================================================
- * # FOOTER
+ * # footer
  *
  *
  * ------------------------------------------------------------------- */
